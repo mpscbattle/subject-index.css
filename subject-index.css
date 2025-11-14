@@ -1,0 +1,72 @@
+/* सामान्य बॉडी और फॉन्ट स्टाइल */
+body {
+    margin: 0px;
+    background-color: #f4f4f9;
+}
+
+/* मुख्य कंटेनर जो सूची को रखता है */
+.subject-list-container {
+    width: 100%;
+    max-width: 100%; /* अधिकतम चौड़ाई सेट करें */
+    margin: 0 auto;
+    background-color: white;
+    padding: 10px;
+    border-radius: 0px;
+}
+
+/* 'विषय' हेडिंग */
+.main-heading {
+    color: #6a0dad; /* बैंगनी जैसा रंग */
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #6a0dad;
+    padding-bottom: 5px;
+}
+
+/* सूची में प्रत्येक विषय की पंक्ति (Flexbox) */
+.subject-item {
+    display: flex;
+    justify-content: space-between; /* विषय और बटन को अलग-अलग कोनों पर धकेलें */
+    align-items: center; /* तत्वों को लंबवत केंद्र में रखें */
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+}
+
+/* अंतिम आइटम के लिए बॉर्डर हटा दें */
+.subject-item:last-child {
+    border-bottom: none;
+}
+
+/* मुख्य विषय का नाम */
+.subject-name {
+    font-size: 18px;
+    color: #333;
+    font-weight: bold;
+}
+
+/* मॉक टेस्ट बटन */
+.mock-test-button {
+    background-color: #007bff; /* नीला रंग */
+    color: white ! important;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 0px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s;
+    text-decoration: none;
+}
+
+.mock-test-button:hover {
+    background-color: #0056b3;
+}
+
+/* प्ले आइकॉन (▶) */
+.play-icon {
+    font-size: 14px;
+    margin-right: 5px;
+}
