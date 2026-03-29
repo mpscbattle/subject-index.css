@@ -1,75 +1,68 @@
-/* सामान्य बॉडी और फॉन्ट स्टाइल */
-body {
-    margin: 0px;
-    background-color: #f4f4f9;
-}
 
-/* मुख्य कंटेनर जो सूची को रखता है */
-.subject-list-container {
-    width: 100%;
-    max-width: 100%; /* अधिकतम चौड़ाई सेट करें */
-    margin: 0 auto;
-    background-color: white;
-    padding: 10px;
-    border-radius: 0px;
-}
+        body {
+            margin: 0px;
+            background-color: #f4f4f9;
+           
+        }
 
-/* 'विषय' हेडिंग */
-.main-heading {
-    color: #6a0dad; /* बैंगनी जैसा रंग */
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 20px;
-    border-bottom: 3px solid #6a0dad;
-    padding-bottom: 5px;
-}
+        .subject-list-container {
+            width: 100%;
+            max-width: 800px; /* स्क्रीन पर बेहतर दिखने के लिए थोड़ी लिमिट */
+            margin: 5px auto;
+            background-color: white;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
 
-/* सूची की पंक्ति */
-.subject-item {
-    display: flex;
-    justify-content: space-between; /* नाम और बटन को दूर रखने के लिए */
-    align-items: center; 
-    padding: 15px 10px;
-    border-bottom: 1px solid #eee;
-    gap: 15px; /* नाम और बटन के बीच की न्यूनतम दूरी */
-}
+        .main-heading {
+            color: #6a0dad;
+            font-size: 10px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            border-bottom: 3px solid #6a0dad;
+            padding-bottom: 5px;
+        }
 
-/* बटन का स्टाइल */
-.mock-test-button {
-    background-color: #007bff;
-    color: white !important;
-    border: none;
-    padding: 8px 16px; /* ऊपर-नीचे 8px, दाएं-बाएं 16px */
-    border-radius: 4px; /* हल्का सा कोना गोल करने के लिए */
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: bold;
-    display: inline-flex; /* इसे inline-flex रखने से यह पूरी लाइन नहीं घेरेगा */
-    align-items: center;
-    text-decoration: none;
-    white-space: nowrap; /* टेक्स्ट को दो लाइन में जाने से रोकेगा */
-    flex-shrink: 0; /* बटन को दबने या छोटा होने से बचाएगा */
-    width: auto; /* यह स्क्रीन के हिसाब से सिर्फ उतनी जगह लेगा जितनी जरूरी है */
-}
+        .subject-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: left;
+            padding: 5px 0;
+            border-bottom: 1px solid #eee;
+        }
 
-/* मोबाइल के लिए खास सेटिंग (अगर स्क्रीन बहुत छोटी है) */
-@media (max-width: 480px) {
-    .subject-name {
-        font-size: 16px; /* मोबाइल पर फोंट थोड़ा छोटा */
-    }
-    .mock-test-button {
-        padding: 6px 12px;
-        font-size: 14px;
-    }
-}
+        .subject-item:last-child {
+            border-bottom: none;
+        }
 
+        .subject-name {
+            font-size: 16px;
+            color: #333;
+            font-weight: bold;
+        }
 
-.mock-test-button:hover {
-    background-color: #0056b3;
-}
+        .mock-test-button {
+            background-color: #007bff;
+            color: white !important;
+            border: none;
+            padding: 3px 3px;
+            border-radius: 4px; /* हल्का सा घुमाव */
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            transition: background-color 0.3s;
+            text-decoration: none;
+        }
 
-/* प्ले आइकॉन (▶) */
-.play-icon {
-    font-size: 14px;
-    margin-right: 5px;
-}
+        .mock-test-button:hover {
+            background-color: #0056b3;
+        }
+
+        .play-icon {
+            font-size: 14px;
+            margin-right: 8px;
+        }
+    
