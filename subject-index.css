@@ -24,42 +24,45 @@ body {
     padding-bottom: 5px;
 }
 
-/* सूची में प्रत्येक विषय की पंक्ति (Flexbox) */
+/* सूची की पंक्ति */
 .subject-item {
     display: flex;
-    justify-content: space-between; /* विषय और बटन को अलग-अलग कोनों पर धकेलें */
-    align-items: center; /* तत्वों को लंबवत केंद्र में रखें */
-    padding: 15px 0;
+    justify-content: space-between; /* नाम और बटन को दूर रखने के लिए */
+    align-items: center; 
+    padding: 15px 10px;
     border-bottom: 1px solid #eee;
+    gap: 15px; /* नाम और बटन के बीच की न्यूनतम दूरी */
 }
 
-/* अंतिम आइटम के लिए बॉर्डर हटा दें */
-.subject-item:last-child {
-    border-bottom: none;
-}
-
-/* मुख्य विषय का नाम */
-.subject-name {
-    font-size: 18px;
-    color: #333;
-    font-weight: bold;
-}
-
-/* मॉक टेस्ट बटन */
+/* बटन का स्टाइल */
 .mock-test-button {
-    background-color: #007bff; /* नीला रंग */
-    color: white ! important;
+    background-color: #007bff;
+    color: white !important;
     border: none;
-    padding: 10px 15px;
-    border-radius: 0px;
+    padding: 8px 16px; /* ऊपर-नीचे 8px, दाएं-बाएं 16px */
+    border-radius: 4px; /* हल्का सा कोना गोल करने के लिए */
     cursor: pointer;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: bold;
-    display: flex;
+    display: inline-flex; /* इसे inline-flex रखने से यह पूरी लाइन नहीं घेरेगा */
     align-items: center;
-    transition: background-color 0.3s;
     text-decoration: none;
+    white-space: nowrap; /* टेक्स्ट को दो लाइन में जाने से रोकेगा */
+    flex-shrink: 0; /* बटन को दबने या छोटा होने से बचाएगा */
+    width: auto; /* यह स्क्रीन के हिसाब से सिर्फ उतनी जगह लेगा जितनी जरूरी है */
 }
+
+/* मोबाइल के लिए खास सेटिंग (अगर स्क्रीन बहुत छोटी है) */
+@media (max-width: 480px) {
+    .subject-name {
+        font-size: 16px; /* मोबाइल पर फोंट थोड़ा छोटा */
+    }
+    .mock-test-button {
+        padding: 6px 12px;
+        font-size: 14px;
+    }
+}
+
 
 .mock-test-button:hover {
     background-color: #0056b3;
